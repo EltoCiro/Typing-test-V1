@@ -1,0 +1,30 @@
+#inputChar {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#exerciseDisplay {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  user-select: none;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  min-height: 100px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.char {
+  padding: 2px 1px;
+  border-bottom: 2px solid transparent;
+}
+
+.char.correct {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.char.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+}

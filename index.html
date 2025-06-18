@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prueba de Mecanografía</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <h1 class="text-center mb-4">Prueba de Mecanografía</h1>
+    <div class="mb-3 text-center">
+      <label for="durationSelect" class="form-label">Selecciona la duración de la prueba:</label>
+      <select id="durationSelect" class="form-select w-50 mx-auto">
+        <option value="1">1 minuto</option>
+        <option value="2">2 minutos</option>
+      </select>
+    </div>
+    <div class="card shadow p-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div><strong>Tiempo restante:</strong> <span id="timer">00:00</span></div>
+        <div><strong>PPM:</strong> <span id="ppm">0</span></div>
+        <div><strong>Precisión:</strong> <span id="accuracy">100%</span></div>
+      </div>
+
+      <div id="exerciseDisplay" class="mb-3 fs-5 p-3 border rounded bg-white"></div>
+      <input id="inputChar" class="form-control mb-3" type="text" placeholder="Escribe aquí..." autofocus autocomplete="off" />
+
+      <div id="feedback" class="alert alert-info text-center" role="alert">
+        Presiona una tecla correcta para comenzar la prueba.
+      </div>
+
+      <button id="restartBtn" class="btn btn-primary w-100">Reiniciar</button>
+    </div>
+  </div>
+
+  <div id="resultModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Resultado de la prueba</h5>
+        </div>
+        <div class="modal-body">
+          <p><strong>Palabras por minuto (PPM):</strong> <span id="finalPPM"></span></p>
+          <p><strong>Precisión:</strong> <span id="finalAccuracy"></span></p>
+          <p id="finalMessage"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
